@@ -11,7 +11,7 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=150)
-    publish_date = models.DateTimeField()
+    publish_date = models.DateField()
     in_stock = models.BooleanField(default=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
